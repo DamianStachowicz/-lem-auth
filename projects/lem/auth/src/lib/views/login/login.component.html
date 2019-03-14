@@ -1,0 +1,10 @@
+<div class="lem-auth-login">
+    <div class="frame">
+        <form [formGroup]="form">
+            <lem-forms-input i18n-placeholder placeholder="Login" formControlName="login"></lem-forms-input>
+            <lem-forms-input type="password" i18n-placeholder placeholder="Password" formControlName="password">
+            </lem-forms-input>
+            <button class="btn-primary" (click)="login()" i18n>Log in</button>
+        </form>
+    </div>
+</div>

@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen  and (min-width : 1224px) {
+    .lem-auth-login {
+        width: 1224px;
+    }
+}
+
+@media only screen and (max-width: 1223px) {
+    .lem-auth-login {
+        width: 1024px;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .lem-auth-login {
+        width: 768px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .lem-auth-login {
+        width: 100%;
+        grid-template-columns: 1fr 50fr 1fr !important;
+    }
+}

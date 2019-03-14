@@ -1,0 +1,23 @@
+{
+    "extends": "../../../tslint.json",
+    "rules": {
+        "directive-selector": [
+            true,
+            "attribute",
+            "lemAuth",
+            "camelCase"
+        ],
+        "component-selector": [
+            true,
+            "element",
+            "lem-auth",
+            "kebab-case"
+        ],
+        "variable-name": [
+            true,
+            "ban-keywords",
+            "check-format",
+            "allow-leading-underscore"
+        ]
+    }
+}
