@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { AuthComponent } from './auth.component';
 import { LoginComponent } from './views/login/login.component';
 import { LemFormsModule } from '@lem/forms';

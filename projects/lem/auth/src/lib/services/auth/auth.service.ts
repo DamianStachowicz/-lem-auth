@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { AuthConfig } from '../../auth.config';
 
 export interface UserCredentials {
     username: string;
@@ -13,6 +14,7 @@ export interface UserCredentials {
 export class AuthService {
 
     constructor(
+        private _config: AuthConfig,
         private _httpClient: HttpClient
     ) { }
 
@@ -20,10 +22,6 @@ export class AuthService {
      * Gets an authorization token
      */
     getToken(credentials: UserCredentials): Observable<string> {
-        /**
-         * TO DO: configurable API url
-         */
-        const apiUrl = '//localhost:8080';
-        return this._httpClient.post<string>(`${apiUrl}/ms-auth/login`, credentials);
+        return this._httpClient.post<string>(`${this._config.apiUrls.msAuth}/ms-auth/login`, credentials);
     }
 }
